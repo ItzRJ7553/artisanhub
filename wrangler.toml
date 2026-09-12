@@ -13,7 +13,7 @@ binding = "ASSETS"
 [[d1_databases]]
 binding = "DB"
 database_name = "artisanhub-d1"
-database_id = "your-d1-database-id-here" # Generated via `wrangler d1 create artisanhub-d1`
+database_id = "b2279df1-6a14-4621-8bee-cc965a0405d2" # Generated via `wrangler d1 create artisanhub-d1`
 migrations_dir = "migrations"
 
 # Cloudflare R2 Bucket Binding for Product & Avatar Images
