@@ -1,0 +1,30 @@
+# Cloudflare Workers & Pages Configuration for Multi-Vendor Creator Marketplace
+name = "artisanhub-marketplace"
+main = "cloudflare/worker.ts"
+compatibility_date = "2024-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Static Assets for Cloudflare Pages / Workers
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+
+# Cloudflare D1 Database Binding
+[[d1_databases]]
+binding = "DB"
+database_name = "artisanhub-d1"
+database_id = "your-d1-database-id-here" # Generated via `wrangler d1 create artisanhub-d1`
+migrations_dir = "migrations"
+
+# Cloudflare R2 Bucket Binding for Product & Avatar Images
+[[r2_buckets]]
+binding = "ASSETS_BUCKET"
+bucket_name = "artisanhub-r2-images"
+preview_bucket_name = "artisanhub-r2-images-preview"
+
+# Environment Variables
+[vars]
+JWT_SECRET = "super-secret-cloudflare-jwt-key"
+APP_NAME = "ArtisanHub"
+ENVIRONMENT = "production"
+R2_PUBLIC_DOMAIN = "https://images.artisanhub.com" # Or Cloudflare custom R2 domain

@@ -1,0 +1,6 @@
+{
+  "name": "ArtisanHub - Creator Marketplace",
+  "description": "A modern multi-vendor marketplace platform for independent creators, handmade artisans, and small home businesses with creator stores, order management, D1 database schema, and ranking system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
